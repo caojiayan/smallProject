@@ -29,14 +29,14 @@
         </script> 
     </head> 
     <body>
-        <input type='text' id='txt1' /> 
+        <input type='text' id='txt1' onkeyup="value=value.replace(/[^\-?\d.]/g,'')"/> <!--只允许输入框输入数字与小数点-->
         <select id='select'>
 		    <option value='+'>+</option>
 		    <option value="-">-</option>
 		    <option value="*">*</option>
 		    <option value="/">/</option>
         </select>
-        <input type='text' id='txt2' /> 
+        <input type='text' id='txt2' onkeyup="value=value.replace(/[^\-?\d.]/g,'')"/> <!--只允许输入框输入数字与小数点-->
         <input type='button' value=' = ' onclick='count()'/> <!--通过 = 按钮来调用函数，得到结果--> 
         <input type='text' id='fruit' />   
 	</body>
