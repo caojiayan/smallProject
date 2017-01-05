@@ -1,0 +1,8 @@
+
+$('#home_slideshow').anythingSlider({autoPlay:true,hashTags:false,delay:6000,animationTime:300,buildArrows:false,appendNavigationTo:$('#home_slideshow_controls'),startText:false,stopText:false,infiniteSlides:false,easing:'fade',onInitialized:function()
+{$('.thumbNav').addClass('inline_list pls');}});$(function()
+{$(window).on('load',function()
+{setTimeout(function(){$('.sprite_900x300_accelerated').addClass('sprite_900x300_home');$('.sprite_900x300_accelerated_old').addClass('sprite_900x300_home_old');},300);});$('#press_home_slideshow').anythingSlider({autoPlay:true,hashTags:false,delay:9000,buildArrows:false,buildNavigation:false,startText:false,stopText:false,easing:'fade'});$('#customer_home_slideshow').anythingSlider({autoPlay:true,hashTags:false,delay:9000,buildArrows:false,buildNavigation:false,startText:false,stopText:false,easing:'fade'});$('#home_slideshow_controls a').mouseover(function()
+{var slide=$(this).attr('class').match(/\bpanel([0-9]*)\b/)[1];$('#home_slideshow').anythingSlider(slide);return false;});$('#home_slideshow').bind('slide_complete',function(e,slider){if(slider.currentPage==1)
+{$('#home_slideshow').data('AnythingSlider').startStop(false);}});$('#customer_home_slideshow_wrapper .anythingSlider').addClass('home_customers_slideshow_wrapper').removeClass('features_slideshow_wrapper');$('.stop_slider').click(function()
+{$('#home_slideshow').data('AnythingSlider').startStop(false);});});

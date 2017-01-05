@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		    <title>Untitled Document</title>
+    
+</head>
+<body>
+    <script type="text/javascript">   
+        /*
+         * param1 Array 
+         * param2 Array
+         * return true or false
+         */
+        function arraysSimilar(arr1, arr2){
+        	//判断arr1的类型
+        	var type=typeof(arr1);
+        	//获取arr1的长度
+        	var le1=arr1.length;
+        	//获取arr2的长度
+        	var le2=arr2.length;
+        	//判断arr1的类型是否严格等于arr2的类型，以及两者长度是否相等
+          if(typeof(arr1)===typeof(arr2)&&le1==le2){
+          	//将获取到的类型名称追加到arr1与arr2后面
+          	newarr1=arr1.push(type);
+          	newarr2=arr2.push(type);
+//        	if(newarr1.sort().toString()==newarr2.sort().toString()){
+//              return true;
+//          }else{
+//              return false;
+//          }
+          } 
+        }
+    </script>
+    <script src="testData.js"></script>
+</body>
+</html>

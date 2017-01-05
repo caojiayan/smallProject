@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="../../jquery-1.7.1.min.js" ></script>
+		<title>全选-取消全选-反选</title>
+	</head>
+	<script>
+		function checkAll(){
+			var checkAll=document.getElementById("checkAll");
+			var send=document.getElementById("send");
+			var div=document.getElementById("div");
+			var checkBox=document.getElementsByTagName("input");
+			if (checkAll.checked) {
+				document.getElementById("check").input
+			} else{
+				
+			}
+		}
+	</script>
+	<body>
+		<div align="center">
+			<h1>你爱好的运动是？</h1>
+			<div id="div">
+				<label>
+				    <input type="checkbox" name="sport" value="足球" />足球
+			    </label>
+			    <label>
+				    <input type="checkbox" name="sport" value="篮球" />篮球
+			    </label>
+			    <label>
+				    <input type="checkbox" name="sport" value="羽毛球" />羽毛球
+			    </label>
+			    <label>
+				    <input type="checkbox" name="sport" value="乒乓球" />乒乓球
+			    </label>
+			</div>
+			<br />
+			<br />
+			<label>
+				<input type="checkbox" id="checkAll" value="全选/全不选" />全选/全不选
+			</label>
+			<label>
+				<input type="checkbox" id="send" value="全选/全不选" />反选
+			</label>
+			<button type="button">提交</button>
+		</div>
+	</body>
+</html>
