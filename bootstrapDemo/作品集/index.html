@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../bootstrap源码文件/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="index.js" ></script>
+		<link rel="stylesheet" href="../bootstrap源码文件/bootstrap.min.css" />
+		<link rel="stylesheet" href="index.css" />
+		<title>作品集</title>
+	</head>
+	<body>
+		<div class="content">
+			<!--导航栏-->
+			<nav id="nav-top" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">个人作品集</a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right" id="example-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#one-page">主页</a></li>
+                            <li><a href="#two-page">关于</a></li>
+                            <li><a href="#three-page">项目</a></li>
+                            <li><a href="#four-page">作品</a></li>
+                            <li><a href="#five-page">自评</a></li>
+                            <li><a href="#six-page">教育</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--主页轮播图-->
+            <div id="one-page">
+            	<div id="myCarousel" class="carousel slide" align="center">
+	                <!-- 轮播（Carousel）指标 -->
+	                <ol class="carousel-indicators">
+		                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		                <li data-target="#myCarousel" data-slide-to="1"></li>
+		                <li data-target="#myCarousel" data-slide-to="2"></li>
+	                </ol>   
+	                <!-- 轮播（Carousel）项目 -->
+	                <div class="carousel-inner">
+		                <div class="item active">
+			                <img src="images/1483516715(1).jpg" alt="First slide">
+		                </div>
+		                <div class="item">
+			                <img src="images/1483516736(1).jpg" alt="Second slide">
+		                </div>
+		                <div class="item">
+			                <img src="images/1483516754(1).jpg" alt="Third slide">
+		                </div>
+	                </div>
+	                <!-- 轮播（Carousel）导航 -->
+	                <!--<a class="carousel-control left" href="#myCarousel"  data-slide="prev">&lsaquo;</a>
+	                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>-->
+                </div> 
+            </div>
+            <!--关于-->
+            <div id="two-page">
+            	<div class="container">
+            		<div class="two-p" align="center">
+            			<p>关于我</p>
+            		</div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                        	<img src="images/001.jpg" alt="照片">
+                        	<div id="person">
+                        		<p>姓名：曹嘉燕&nbsp;&nbsp;女</p>
+                        	    <p>联系电话：13760699300</p>
+                        	    <p>邮箱：caojiayan7@126.com</p>
+                        	    <p>个人博客：<a href="http://www.cnblogs.com/caojiayan/">caojiayan7@126.com</a></p>
+                        	    <p>github：<a href="https://github.com/caojiayan">caojiayan7@126.com</a></p>
+                        	    <p>住址：白云区永泰</p>
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                        	<div>
+                        		<p align="left">应聘职位：web前端开发</p>
+                        		Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                                Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                            </div>
+                            <div id="skills">
+                            	<ul>
+                            		<li>
+                            			<div class="progress">
+                                           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+                                               <span class="sr-only"></span>
+                                               <p>html</p>
+                                           </div>
+                                       </div>
+                            		</li>
+                            		<li>
+                            			<div class="progress">
+                                           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                               <span class="sr-only"></span>
+                                               <p>css</p>
+                                           </div>
+                                       </div>
+                            		</li>
+                            		<li>
+                            			<div class="progress">
+                                           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                               <span class="sr-only"></span>
+                                               <p>JavaScript</p>
+                                           </div>
+                                       </div>
+                            		</li>
+                            		<li>
+                            			<div class="progress">
+                                           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                               <span class="sr-only"></span>
+                                               <p>jQuery</p>
+                                           </div>
+                                       </div>
+                            		</li>
+                            		<li>
+                            			<div class="progress">
+                                           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                               <span class="sr-only"></span>
+                                               <p>bootstrap</p>
+                                           </div>
+                                       </div>
+                            		</li>
+                            		<li>
+                            			<div class="progress">
+                                           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                               <span class="sr-only"></span>
+                                               <p>less</p>
+                                           </div>
+                                       </div>
+                            		</li>
+                            		<li>
+                            			<div class="progress">
+                                           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                               <span class="sr-only"></span>
+                                               <p>vue.js</p>
+                                           </div>
+                                       </div>
+                            		</li>
+                            	</ul>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+            <!--项目-->
+            <div id="three-page">
+            	<div class="two-p" align="center">
+            		<p>我的项目</p>
+            	</div>
+            	<div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 service">
+                        	<div class="3project">
+                        		<div class="3projectImg Imgcolor">
+                        			<img src="images/webdesign.png" alt="项目图标" />
+                        		</div>
+                        		<h3>**官网与商家后台</h3>
+                        		<h4>html+css+js+jquery</h4>
+                        		<p>
+                        			Donec sed odio dui。Etiam porta sem malesuada magna mollis euismod。Nullam id dolor id nibh ultricies vehicula id id elit。Morbi leo risus，porta ac consectetur ac，vestibulum at eros。
+                        		</p>
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 service">
+                        	<div class="3project">
+                        		<div class="3projectImg">
+                        			<img src="images/graphicdesign.png" alt="项目图标" />
+                        		</div>
+                        		<h3>响应式官网</h3>
+                        		<h4>h5+css+bootstrap+jquery</h4>
+                        		<p>
+                        			Donec sed odio dui。Etiam porta sem malesuada magna mollis euismod。Nullam id dolor id nibh ultricies vehicula id id elit。Morbi leo risus，porta ac consectetur ac，vestibulum at eros。
+                        		</p>
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4 service">
+                        	<div class="3project">
+                        		<div class="3projectImg">
+                        			<img src="images/mobile.png" alt="项目图标" />
+                        		</div>
+                        		<h3>微信公众号端H5页面</h3>
+                        		<h4>h5+less+jquery+vue.js</h4>
+                        		<p>
+                        			Donec sed odio dui。Etiam porta sem malesuada magna mollis euismod。Nullam id dolor id nibh ultricies vehicula id id elit。Morbi leo risus，porta ac consectetur ac，vestibulum at eros。
+                        		</p>
+                        	</div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <!--作品-->
+            <div id="four-page">
+            	<div class="two-p" align="center">
+            		<p>我的作品</p>
+            	</div>
+            	<div id="fourList">
+            		<button type="button" class="btn btn-primary" data-toggle="button">所有</button>
+            		<button type="button" class="btn btn-primary" data-toggle="button">JavaScript</button>
+            		<button type="button" class="btn btn-primary" data-toggle="button">bootstrap</button>
+            		<button type="button" class="btn btn-primary" data-toggle="button">vue.js</button>
+            	</div>
+            	<div class="container">
+                    <div class="row fourPic">
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/2.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/3.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/4.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/5.jpg" />
+                        	</div>
+                        </div>
+                    </div>
+                    <div class="row fourPic">
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/6.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/2.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/3.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/4.jpg" />
+                        	</div>
+                        </div>
+                    </div>
+                    <div class="row fourPic">
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/5.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/6.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/2.jpg" />
+                        	</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6  col-lg-3">
+                        	<div class="four-img">
+                        		<img src="images/3.jpg" />
+                        	</div>
+                        </div>
+                    </div>
+            	</div>
+            </div>
+            <!--自评-->
+            <div id="five-page">
+            	<div class="two-p" align="center">
+            		<p>自我评价</p>
+            	</div>
+            	<div class="container">
+            		<div class="row">
+            			<div class="col-xs-12 col-sm-6">
+            				<div class="fiveImg">
+            					<img src="images/agency-img.jpg" alt="图片">
+            				</div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                        	<p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+            	            <p>若是跟你们同行，必定加倍珍惜。</p>
+            	            <p>爱好：跑步、摄影、爬山。</p>
+                        </div>
+                  </div>
+            	</div>
+            </div>
+            <!--教育-->
+            <div id="six-page">
+                <div class="two-p" align="center">
+            		<p>教育背景</p>
+            	</div>
+            	<div class="container">
+            		<div class="row">
+                        <div class="col-xs-12 col-sm-6 boxLeft">
+                        	<div class="sixBox">
+            			        <h3>广州大学纺织服装学院&nbsp;专科</h3>
+            			        <p>国际贸易实务专业 2013.6 - 2016.7</p>
+            		        </div>
+            		        <div class="sixBox">
+            			        <h3>获奖经历 </h3> 
+                                <p>学院三等奖学金  2015.6</p>
+                                <p>优秀团干  2015.6</p>
+                                <p>学院" 广纺杯" 篮球赛女子组 第一名  2014.5</p>
+            		        </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 boxLeft">
+                        	<div class="sixBox">
+                        	    <h4>学院团委实践部部长</h4>
+                                <p>
+                            	         注要职责：在校开展一系列丰富的社会实践活动，曾多次担任校园活动的负责人，策划并成功开展多项大型活动，并获得指导老师的肯定，如：“趣味运动会”“圣诞游园会”“就业创业大赛”；
+                                </p>
+                           </div>
+                           <div class="sixBox">
+                                <h4>计算机协会副会长</h4>
+                                <p>
+                            	注要职责：通过各种方式普及计算机知识、传播网络科技文化、提升社团知名度和影响力。用微博、人人、贴吧、QQ、以及微信等社交网站及时更新社团信息、定时收藏跟发掘计算机方面的新技能跟信息，并且通过这些平台分享计算机技术跟信息。
+                                </p>
+                            </div>
+                        </div>
+                   </div>
+            	</div>
+            </div>
+        <!--content结束-->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,118 @@
+/*导航栏*/
+.content{
+	color: #FFF;
+}
+nav .navbar-brand,
+nav .navbar-default,
+nav .navbar-nav a{
+	color: #FFF !important;
+}
+#nav-top{
+	padding:0 5%;
+	background: #5CB85C;
+	font-family:"微软雅黑";
+}
+
+#one-page,
+#two-page,
+#three-page,
+#four-page,
+#five-page,
+#six-page{
+	width: 100%;
+    padding: 8em 0px;
+    position: relative;
+    overflow: hidden;
+    z-index: 900;
+    display: block;
+    text-align: center;
+}
+/*轮播页面*/
+#one-page{
+    padding-top:50px;
+    background: url(images/carousel-bg.jpg) 0 0 repeat fixed;
+}
+/*关于我*/
+#two-page{
+	background: #2c3e50;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.9);
+}
+.two-p{
+	padding-bottom: 5em;
+}
+.two-p p{
+	width: 5em;
+	font-size: 3em;
+	border-bottom: 1px solid #FFF;
+}
+#two-page #person{
+	padding-top: 2em;
+}
+#two-page #skills{
+	padding-top: 2em;
+}
+#two-page #skills ul li{
+	list-style:none;
+}
+/*我的项目*/
+#three-page{
+    background: #27ad60;
+}
+#three-page .service {
+    padding: 0px 40px 20px 40px;
+}
+#three-page .3project{
+	margin: 0px 10px;
+    padding: 30px 10px;
+}
+/*.3projectImg{
+	position: relative;
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    padding-top: 22px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+	background: url(images/icon-bg.png) repeat-x center center;
+	transition-duration: 0.8s;
+}
+#three-page .3project .Imgcolor{
+	background-color: #2c3e50;
+	color: #e67e22;
+}*/
+#three-page .3project .3projectImg img{
+	vertical-align: middle;
+}
+/*我的作品*/
+#four-page{
+    background: #2c3e50;
+}
+.four-img img,
+.fiveImg img{
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+#four-page #fourList{
+	padding-bottom: 2em;
+}
+#four-page .fourPic{
+	padding: 10px 0;
+}
+/*自评*/
+#five-page{
+    background: #27ad60;
+}
+
+/*教育*/
+#six-page{
+    background: #2c3e50;
+}
+#six-page .sixBox{
+	padding-bottom: 20px;
+	background: url(images/creation.png)no-repeat leftt center;
+}
+#six-page .sixBox .boxLeft{
+	padding: 0px 100px 20px 100px;
+}
