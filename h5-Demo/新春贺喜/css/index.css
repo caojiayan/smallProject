@@ -1,0 +1,235 @@
+*{
+	margin: 0;
+	padding: 0;
+	border:none;
+	font-family: "微软雅黑";
+	font-size: 1.56vw;
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+}
+/*music*/
+.music{
+	position: fixed;
+	top: 3vw;
+	right: 4vw;
+	z-index: 5;
+	width: 15vw;
+	height: 15vw;
+	border: 4px solid #FFF;
+	border-radius: 50%;
+	background: #FFF;	
+}
+.music img:first-of-type{
+	position: absolute;
+	top:24%;
+	right:2.5%;
+	width: 28.421%;
+	z-index: 9;
+}
+.music img:last-of-type{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom: 0;
+	left: 0;
+	margin:auto;
+	width: 79%;
+}
+/*page1*/
+.page .gd{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+} 
+#page1 .gd{
+	background: url(../img/p1_bg.jpg) no-repeat center center;
+	background-size: 100%;
+}
+#page1{
+	height: 100%;
+	display: block;
+}
+#page1 .p1_lantern{
+	position: absolute;
+	top:-3.4%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0 auto;
+	background: url(../img/p1_lantern.png) no-repeat center bottom;
+	background-size:100%;
+	width: 45vw;
+	height: 71.2vh;
+	padding-top: 31vh;
+	text-align: center;
+	font-size: 3.506em;
+	box-sizing: border-box;
+	color: #FFF;
+}
+#page1 .p1_lantern:before{
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	content: "";
+	margin:auto;
+	background: red;
+	width: 30vw;
+	height: 30vw;
+	opacity: 0.5;
+	border-radius: 50%;
+	-webkit-box-shadow: 0 0 10vw 10vw red;
+	   -moz-box-shadow: 0 0 10vw 10vw red ;
+	     -o-box-shadow: 0 0 10vw 10vw red ;
+	        box-shadow: 0 0 10vw 10vw red;
+}
+#page1 .p1_imooc{
+	position: absolute;
+	right: 0;
+	bottom:9vw;
+	left: 0;
+	margin:auto;
+	background: url(../img/p1_imooc.png) no-repeat center bottom;
+	background-size: 100%;
+	width: 27.656vw;
+	height: 18.63vh;
+}
+#page1 .p1_words{
+	position: absolute;
+	right: 0;
+	bottom:3vw;
+	left: 0;
+	margin:auto;
+	width: 27.656vw;
+	height: 3vh;
+}
+
+/*page2*/
+#page2 .gd{
+	background: url(../img/p2_bg.jpg)no-repeat center center;
+	background-size: 100%;
+}
+#page2{
+	display: none;
+	height: 100%;
+}
+#page2 .p2_circle{
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 50%;
+	content: "";
+	background: url(../img/p2_circle_outer.png)no-repeat center center;
+	background-size: 100%;
+	width: 59.375vw;
+	height: 59.375vh;
+}
+#page2 .p2_circle:before{
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 50%;
+	content: "";
+	background: url(../img/p2_circle_middle.png)no-repeat center center;
+	background-size: 100%;
+	width: 40vw;
+	height: 40vh;
+}
+#page2 .p2_circle:after{
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border-radius: 50%;
+	content: "";
+	background: url(../img/p2_circle_inner.png)no-repeat center center;
+	background-size: 100%;
+	width: 30vw;
+	height: 30vh;
+}
+#page2 .p2_word{
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin:auto;
+	width: 30vw;
+	height: 6vh;
+	text-align: center;
+	color: #FFF;
+	font-size:5em;
+}
+/*page3*/
+#page3 .gd{
+	background: url(../img/p3_bg.jpg)no-repeat center center;
+	background-size: 100%;
+}
+#page3{
+	height:100%;
+	display: none;
+}
+#page3 .p3_logo{
+	
+}
+#page3 .p3_title{
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background: url(../img/spring.Png)no-repeat center center;
+	background-size: 100%;
+	width: 25vw;
+	height: 80vh;
+}
+#page3 .p3_secone{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left:5vw;
+	margin: auto;
+	background: url(../img/p3_couplet_second.png)no-repeat center center;
+	background-size: 100%;
+	width: 35vw;
+	height: 60vh;
+}
+#page3 .p3_first{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right:5vw;
+	margin: auto;
+	background: url(../img/p3_couplet_first.png)no-repeat center center;
+	background-size: 100%;
+	width: 35vw;
+	height: 60vh;
+}
+#page3 .p3_blessing{
+	position: absolute;
+	right: 0;
+	bottom:2vh;
+	left: 0;
+	margin: 0 auto;
+	background: url(../img/p3_blessing.png)no-repeat center center;
+	background-size: 100%;
+	width: 35vw;
+	height: 35vw;
+}
