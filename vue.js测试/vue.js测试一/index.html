@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue.js测试一</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/vue.min.js" ></script>
+	</head>
+	<body>
+		<!--声明-->
+		<div id="app">
+			{{message}}
+		</div>
+		<!--v-bind绑定-->
+		<div id="app-2">
+		    <span v-bind:title="mes">
+		    	Hover your mouse over me for a few seconds to see my dynamically bound title!
+		    </span>
+		</div>
+		<!--条件-->
+		<div id="app-3">
+			<p v-if="seen">Now you see me</p>
+		</div>
+		<!--循环-->
+		<div id="app-4">
+			<ol>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ol>
+		</div>
+		<!--处理用户输入-->
+		<div id="app-5">
+			<p>{{messa}}</p>
+			<button v-on:click="reverseMessa">Reverse</button>
+		</div>
+		<!--用组件构建（应用）-->
+		<div id="app-6">
+			<ol>
+				<todo-item></todo-item>
+			</ol>
+		</div>
+		<div id="app-7">
+			<ol>
+				<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+			</ol>
+		</div>
+	</body>
+	<script>
+	
+		var app=new Vue({
+			el:'#app',
+			data:{
+				message:'hello Vue!'
+			}
+		})
+		
+		var app2=new Vue({
+			el:'#app-2',
+			data:{
+				mes:'Your loaded this page on'+new Date()
+			}
+		})
+		//打开浏览器的控制台输入 app2.message = 'some new message'，你就会再一次看到这个绑定了title属性的HTML已经进行了更新,更新为：Your loaded this page onTue Jan 10 2017 19:58:31 GMT+0800 (中国标准时间)
+		
+		var app3=new Vue({
+			el:'#app-3',
+			data:{
+				seen:true
+			}
+		})
+		//继续在控制台设置 app3.seen = false，你会发现 “Now you see me” 消失了。
+		
+		var app4=new Vue({
+			el:'#app-4',
+			data:{
+				todos:[
+				    {text:'learn Javascript'},
+				    {text:'learn Vue'},
+				    {text:'Build something awesome'}
+				]
+			}
+		})
+		//在控制台里，输入 app4.todos.push({ text: 'New item' })。你会发现列表中多了一栏新内容。
+		
+		var app5=new Vue({
+			el:'#app-5',
+			data:{
+				messa:"Hello Vue.js!"
+			},
+			methods:{
+				reverseMessa:function(){
+					this.messa=this.messa.split('').reverse().join('')
+				}
+			}
+		})
+		
+		Vue.component('todo-item',{
+			template:'<li>This is a todo</li>'
+		})
+		Vue.component('todo-item',{
+			props:['todo'],
+			template:'<li>{{todo.text}}</li>'
+		})
+		
+		Vue.component('todo-item',{
+			props:['todo'],
+			template:'<li>{{todo.text}}</li>'
+		})
+		var app7=new Vue({
+			el:'#app-7',
+			data:{
+				groceryList:[
+				    {text:'Vegetables'},
+				    {text:'Cheese'},
+				    {text:'Whateverelse humans are supposed to eat'}
+				]
+			}
+		})
+	</script>
+</html>
