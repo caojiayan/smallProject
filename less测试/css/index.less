@@ -1,0 +1,137 @@
+@base: #f938ab;
+.pclass{
+    color: @base;
+}
+
+//@div:div;
+//.@{div}{
+//  color: @base;
+//}
+
+//@img:"../img";
+//.div{
+//  color: @base;
+//  background:url("@{img}/p1_bg.jpg"); 
+//}
+
+//@path : "http://www.yiibai.com/less";
+//@import "@{path}/external1.less";
+
+//@per:color;
+//.div{
+//  @{per}:#0ee;
+//  background-@{per}:#999;
+//}
+
+.pclass{
+    border-top: dotted 1px black;
+    border-bottom: solid 2px #eee;
+}
+.div{
+    .pclass;
+    background-color:#EEE;
+}
+
+.border-radius(@color:#000;@radius:20px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+          color: @color;
+}
+.div{
+   .border-radius; 
+}
+
+.box-shadow(@x:0;@y:0;@blur:10px;@color:#000){
+    -webkit-box-shadow: @arguments;
+     -moz-box-shadow: @arguments;
+          box-shadow: @arguments;
+}
+.div{
+//  .box-shadow;
+    .box-shadow(10px;10px;20px;);
+}
+.div{
+    font-size: 18px;
+    .div-two{
+        color:red;
+        background: #444;
+    }
+}
+
+.mixin(){
+    @width:75%;
+    @height:75%;
+}
+.div{
+    .mixin();
+    width: @width;
+    height: @height;
+}
+
+.max(@a)when(lightness(@a)>=50%){
+    background-color: black;
+}
+.max(@a)when(lightness(@a)<50%){
+    background-color: #EEE;
+}
+
+.div{
+    .max(#555);
+}
+@my:true;
+& when (@my=true){
+    .div{
+        color:red;
+    }
+}
+
+//栅格系统的css
+//.generate-columns(4);
+//.generate-columns(@n,@i:1)when(@i<=@n){
+//  .column-@{i}{
+//      width:(@i*100%/@n);
+//  }
+//  .gennerate-columns(@n,(@i+1));
+//}
+//->输出的CSS
+//  .column-1 {
+//      width: 25%;
+//  }
+//
+//  .column-2 {
+//      width: 50%;
+//  }
+//
+//  .column-3 {
+//      width: 75%;
+//  }
+//
+//  .column-4 {
+//      width: 100%;
+//  }
+
+.m(){
+    box-shadow+:inset 0 0 10px red ;
+}
+.div{
+    .m;
+    box-shadow+:0 0 20px black ;
+}
+
+.mi(){
+    transform+_:scale(2);
+}
+.div{
+    .mi;
+    transform+_:rotate(45deg) ;
+}
+
+
+
+
+
+
+
+
+
