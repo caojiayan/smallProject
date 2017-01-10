@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Image Gallery</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<h1>Snapshots</h1>
+		<ul>
+			<li>
+				<a href="images/001.jpg" title="一条粉红色的裤子" onclick="showPic(this);return false;">粉红色裤子</a>
+			</li>
+			<li>
+				<a href="images/002.jpg" title="一件紫色的吊带衫" onclick="showPic(this);return false;">紫色吊带衫</a>
+			</li>
+			<li>
+				<a href="images/003.jpg" title="一件粉红色的吊带衫" onclick="showPic(this);return false;">粉红色吊带衫</a>
+			</li>
+			<li>
+				<a href="images/004.jpg" title="一件牛仔裤" onclick="showPic(this);return false;">牛仔裤</a>
+			</li>
+			<li>
+				<a href="images/005.jpg" title="一件黄色的针织衫" onclick="showPic(this);return false;">黄色针织衫</a>
+			</li>
+		</ul>
+		<img id="placeholder" src="images/p1_bg.jpg" align="center" style="width:200px;height: 250px;background: #EEE;">
+		<p id="description">Choose an image.;</p>
+	</body>
+	<script>
+		function showPic(whichpic){
+			var source=whichpic.getAttribute("href");
+			var placeholder=document.getElementById("placeholder");
+			var text=whichpic.getAttribute("title");
+			var description=document.getElementById("description");
+			placeholder.setAttribute("src",source);
+			description.firstChild.nodeValue=text;
+		}
+		function countBodyChildren(){
+			var body_element=document.getElementsByTagName("body")[0];
+//			alert(body_element.childNodes.length);//输出body子元素的个数
+//          alert(body_element.nodeType);//1为元素节点；2为属性节点；3为文本节点
+		}
+		window.onload=countBodyChildren;
+	</script>
+</html>
