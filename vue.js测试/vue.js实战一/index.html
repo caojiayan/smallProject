@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="js/vue.js" ></script>
+		<title>vue.js实战一</title>
+	</head>
+	<script>
+		window.onload=function(){
+			new Vue({
+				el:'#box',
+				data:{
+					//获取列表中的数据
+					myData:[],
+					username:'',
+					age:'',
+					//列表中的序号索引值赋值给“删除”按钮中绑定nowIndex的索引
+					//在模态框中绑定了nowIndex，以获取索引
+					nowIndex:-100
+				},
+				//函数
+				methods:{
+					//点击添加按钮的时候，将输入框中的值追加到列表中
+					add:function(){
+						this.myData.push({
+							//列表中的name值为输入框中的username的值
+							name:this.username,
+							//列表中的age值为输入框中的age的值
+							age:this.age
+						});
+						//列表添加内容完之后输入框里的值就清空
+						this.username='';
+						this.age='';
+					},
+					deleteMsg:function(n){
+						if(n==-2){
+							this.myData=[];
+						}else{
+							this.myData.splice(n,1);
+						}
+					}
+				}
+			});
+		};
+	</script>
+	<body>
+		<div id="box" style="padding: 20px 0;">
+			<form role="form">
+				<div class="input-group">
+                    <span class="input-group-addon">姓名</span>
+                    <input type="text" class="form-control" placeholder="请输入姓名" v-model="username"><!--函数绑定-->
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon">年龄</span>
+                    <input type="text" class="form-control" placeholder="请输入年龄" v-model="age"><!--函数绑定-->
+                </div>
+                <br />
+                <button type="button" class="btn btn-primary" v-on:click="add()">添加</button>
+                <button type="button" class="btn btn-danger">重置</button>
+			</form>
+        <!--列表-->
+        <table class="table table-hover">
+            <h3 align="center">提交的列表如下</h3>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            	<tr v-for="item in myData">
+                    <td>{{$index+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td>
+      	                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" v-on:click="nowIndex=$index">删除</button> <!--在删除按钮中绑定nowIndex的索引就是列表中的序号-->
+                    </td>
+                </tr>
+      	        <tr>
+                    <td colspan=4 class="text-right" v-show="myData.length!=0">
+      	               <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal" v-on:click="nowIndex='-2'">删除全部</button>
+                    </td>
+                </tr>
+                <tr v-show="myData.length===0">
+                    <td colspan=4 class="text-center">暂无数据...</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-index="{{nowIndex}}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">确认要删除吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" v-on:click="deleteMsg()">确认</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        </div><!--box-->
+	</body>
+</html>
