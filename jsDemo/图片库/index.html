@@ -7,40 +7,81 @@
 	</head>
 	<body>
 		<h1>Snapshots</h1>
-		<ul>
+		<ul id="imagegallery" >
 			<li>
-				<a href="images/001.jpg" title="一条粉红色的裤子" onclick="showPic(this);return false;">粉红色裤子</a>
+				<a href="images/001.jpg" title="一条粉红色的裤子" onclick="showPic(this);return false;">
+					<img src="images/001.jpg" alt="一条粉红色的裤子" />
+				</a>
 			</li>
 			<li>
-				<a href="images/002.jpg" title="一件紫色的吊带衫" onclick="showPic(this);return false;">紫色吊带衫</a>
+				<a href="images/002.jpg" title="一件紫色的吊带衫" onclick="showPic(this);return false;">
+					<img src="images/002.jpg" alt="一件紫色的吊带衫" />
+				</a>
 			</li>
 			<li>
-				<a href="images/003.jpg" title="一件粉红色的吊带衫" onclick="showPic(this);return false;">粉红色吊带衫</a>
+				<a href="images/003.jpg" title="一件粉红色的吊带衫" onclick="showPic(this);return false;">
+					<img src="images/003.jpg" alt="一件粉红色的吊带衫" />
+				</a>
 			</li>
 			<li>
-				<a href="images/004.jpg" title="一件牛仔裤" onclick="showPic(this);return false;">牛仔裤</a>
+				<a href="images/004.jpg" title="一条牛仔裤" onclick="showPic(this);return false;">
+					<img src="images/004.jpg" alt="一条牛仔裤" />
+				</a>
 			</li>
 			<li>
-				<a href="images/005.jpg" title="一件黄色的针织衫" onclick="showPic(this);return false;">黄色针织衫</a>
+				<a href="images/005.jpg" title="一件黄色的针织衫" onclick="showPic(this);return false;">
+					<img src="images/005.jpg" alt="一件黄色的针织衫" />
+				</a>
 			</li>
 		</ul>
 		<img id="placeholder" src="images/p1_bg.jpg" align="center" style="width:200px;height: 250px;background: #EEE;">
 		<p id="description">Choose an image.;</p>
 	</body>
 	<script>
+	    //检查当前浏览器是否理解DOM方法
+	    function prepareGallery(){
+	        if(!document.getElementsByTagName) return false;
+	        if(!document.getElementById) return false;
+	        if(!document.getElementById("imagegallery")) return false;
+	        var gallery=document.getElementById("imagegallery");
+	        var link=gallery.getElementsByTagName("a");
+	        for(var i=0;i<links.length;i++){
+	        	links[i].onclick=function(){
+	        		return !showPic(this);
+	        	}
+	        	//改为三元运算符是：links[i].onclick=function(){return !showPic(this) ? false:tur;}
+	        	
+	        	//针对视力残疾的用户，一般是使用键盘，使用onkeypress事件
+//	        	links[i].onkeypress = links[i].onclick;
+	        }
+	    }
+	    
 		function showPic(whichpic){
+			//检查placeholder元素是否存在
+			if(!document.getElementById("placeholder")){
+				return false;
+			}
+			//可简写为：if(!document.getElementById("placeholder"))return false；
 			var source=whichpic.getAttribute("href");
 			var placeholder=document.getElementById("placeholder");
-			var text=whichpic.getAttribute("title");
-			var description=document.getElementById("description");
 			placeholder.setAttribute("src",source);
-			description.firstChild.nodeValue=text;
+			//检查description元素是否存在
+			if(document.getElementById("description")){
+                //检查title是否真实存在
+			    var text=whichpic.getAttribute("title") ? whichpic.getAttribute("title") : "";
+			    var description=document.getElementById("description");
+			    //检查decription元素的第一个子元素是否是一个文本节点
+			    if(description.firstChild.nodeType ===3){
+			    	description.firstChild.nodeValue=text;	
+			    }
+			}
+			return false;
 		}
-		function countBodyChildren(){
-			var body_element=document.getElementsByTagName("body")[0];
+//		function countBodyChildren(){
+//			var body_element=document.getElementsByTagName("body")[0];
 //			alert(body_element.childNodes.length);//输出body子元素的个数
 //          alert(body_element.nodeType);//1为元素节点；2为属性节点；3为文本节点
-		}
-		window.onload=countBodyChildren;
+//		}
+//		window.onload=countBodyChildren;
 	</script>
 </html>
