@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue.js测试三</title>
+	</head>
+	<body>
+		<!--组件全局注册-->
+		<div id="app1">
+			 <!-- 3. #app是Vue实例挂载的元素，应该在挂载元素范围内使用组件-->
+			<my-component></my-component>
+		</div>
+		<br />
+		<!--组件局部注册-->
+		<div id="app2">
+			<my-com></my-com>
+		</div>
+		<br />
+		<!--父子组件-->
+		<child message1="hello!"></child>
+	</body>
+	<script type="text/javascript" src="js/vue.js" ></script>
+	<script>
+		//1.创建一个组件构造器
+		var myComponent=Vue.extend({
+			template:'<div>这是一个全局注册组件！</div>'
+		})
+		//2.注册组件，并指定组件的标签，组件的HTML标签为<my-component>
+		Vue.component('my-component',myComponent)
+		//Vue实例
+		new Vue({
+			el:'#app1'
+		})
+		
+		// 1.创建一个组件构造器
+		var myCom=Vue.extend({
+			template:'<div>这是一个局部注册组件！</div>'
+		})
+		new Vue({
+			el:'#app2',
+			components:{
+				// 2. 将myCom组件注册到Vue实例下
+				//组件的HTML标签为<my-com>
+				'my-com':myCom
+			}
+		})
+		
+		//父子组件
+		Vue.component('child',{
+			//声明props
+			props:['message1'],
+			//就像data一样，prop可以用在模板内
+			//同样也可以在vm实例中像“this.message”这样使用
+			template:'<span>{{message1}}</span>'
+		})
+	</script>
+</html>
