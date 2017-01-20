@@ -1,0 +1,228 @@
+/*通用*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  font-family: 'Open Sans', sans-serif;
+  
+  background: linear-gradient(top, #222, #333);
+}
+
+[class$="box"] {
+  margin: 16px;
+  padding: 4px;
+  
+  background-color: #e7e7e7;
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+  
+  box-shadow:
+    inset 0 5px white, 
+    inset 0 -5px #bbb,
+    inset 5px 0 #d7d7d7, 
+    inset -5px 0 #d7d7d7;
+  
+  border-radius: 10%;
+}
+
+.item {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 4px;
+  background-color: #333;
+  box-shadow: inset 0 3px #111, inset 0 -3px #555;
+}
+
+/*一个点*/
+.one-left-box {
+  display: flex;
+}
+.one-center-box{
+	display: flex;
+	justify-content: center;
+}
+.one-right-box {
+  display: flex;
+  justify-content: flex-end;
+}
+.one-align-left-box{
+	display: flex;
+	align-items: flex-start;
+}
+.one-align-center-box{
+	display: flex;
+	align-items: center;
+}
+.one-align-right-box{
+	display: flex;
+	align-items: flex-end;
+}
+.one-mid-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.one-mid-bottom-box{
+	display: flex;
+	justify-content:center;
+	align-items:flex-end;
+}
+.one-mid-right-box{
+	display: flex;
+	justify-content:flex-end;
+	align-items:center;
+}
+
+/*两个点*/
+.two-1-box{
+	display: flex;
+	justify-content: space-between;
+}
+.two-2-box{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.two-3-box{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+}
+.two-4-box{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items:flex-end;
+}
+.two-5-box {
+	display: flex;
+}
+.two-5-box > .item:nth-child(2){
+	align-self:center;
+}
+.two-6-box{
+	display: flex;
+}
+.two-6-box > .item:nth-child(2){
+	align-self:flex-end;
+}
+.two-7-box{
+	display: flex;
+	justify-content: space-between;
+}
+.two-7-box > .item:nth-child(2){
+	align-self:flex-end;
+}
+.two-8-box{
+	display: flex;
+	justify-content: space-between;
+}
+.two-8-box > .item:nth-child(2){
+	align-self:center;
+}
+.two-box{
+	display: flex;
+}
+
+/*三个点*/
+.three-1-box{
+	display: flex;
+}
+.three-2-box{
+	display: flex;
+	align-items: center;
+}
+.three-3-box{
+	display: flex;
+}
+.three-3-box .item:nth-child(2) {
+    align-self: center;
+}
+.three-3-box .item:nth-child(3) {
+    align-self: flex-end;
+}
+.three-3-box{
+	display: flex;
+}
+.three-3-box .item:nth-child(2) {
+    justify-content: center;
+}
+.three-3-box .item:nth-child(3) {
+    align-self: flex-end;
+}
+
+/*四个点*/
+.four-1-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: space-between;
+}
+.four-2-box{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    align-content: space-between;
+}
+.four-3-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.four-3-box .column {
+  flex-basis: 100%; /*容器剩余部分空间的分配（以占据主轴空间为准）*/
+  display: flex;
+  justify-content: space-between;
+}
+
+/*六个点*/
+.six-1-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.six-1-box .column {
+  flex-basis: 100%; /*容器剩余部分空间的分配（以占据主轴空间为准）*/
+  display: flex;
+  justify-content: space-between;
+}
+.six-2-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.six-2-box .column {
+  flex-basis: 100%; /*容器剩余部分空间的分配（以占据主轴空间为准）*/
+  display: flex;
+}
+.six-2-box .column:nth-child(2){
+	justify-content: center;
+}
+.six-2-box .column:nth-child(3){
+  justify-content: space-between;
+}
+
+/*九个点*/
+.nine-box{
+	display: flex;
+    flex-wrap: wrap;
+}
